@@ -2,5 +2,5 @@
 ./node-api/node_modules
 
 #docker
-data
-node_modules
+data/
+node_modules/
