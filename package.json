@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "node api for interaction with mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon node-api/app.js"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "mongo"
+  ],
+  "author": "Bruno Campos Neves",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4",
+    "nodemon": "^2.0.15"
+  }
+}

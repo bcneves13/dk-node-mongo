@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  server:
+    container_name: NODE_BRM_TEST
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      - PORT=5555
+      - MONGO_URI=mongodb://db:27017/local
+    ports:
+      - 5555:5555
+    command: npm run start
+
+  db:
+    image: 'mongo'
+    container_name: MONGO_BRM_TEST
+    ports:
+      - '27019:27017'
+    volumes:
+      - ./data/db:/data/db
